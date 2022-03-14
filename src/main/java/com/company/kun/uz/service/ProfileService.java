@@ -3,6 +3,7 @@ import com.company.kun.uz.dto.article.ArticleFilterDto;
 import com.company.kun.uz.dto.profile.ProfileDTO;
 import com.company.kun.uz.dto.profile.ProfileFilterDto;
 import com.company.kun.uz.entity.ArticleEntity;
+import com.company.kun.uz.entity.CommentEntity;
 import com.company.kun.uz.entity.ProfileEntity;
 import com.company.kun.uz.enums.ArticleStatus;
 import com.company.kun.uz.enums.ProfileStatus;
@@ -42,6 +43,9 @@ public class ProfileService {
     public ProfileEntity getByid(Integer id){
         return profileRepository.findById(id).orElseThrow(() -> new ItemNotFoundExeption("Profile not found"));
     }
+    public ProfileEntity getByidfdsdf(Integer id){
+        return profileRepository.findById(id).orElseThrow(() -> new ItemNotFoundExeption("Profile not found"));
+    }
 
     public ProfileDTO UpdateProfileByEmail(ProfileDTO profileDTO,Integer id){
         Optional<ProfileEntity> result = profileRepository.findAdminid(id);
@@ -56,6 +60,7 @@ public class ProfileService {
 
      public ProfileDTO todto(ProfileEntity profile){
         ProfileDTO profileDTO =new ProfileDTO();
+         CommentEntity comment = new CommentEntity();
         profileDTO.setId(profile.getId());
         profileDTO.setName(profile.getName());
         profileDTO.setSurname(profile.getSurname());

@@ -4,6 +4,7 @@ package com.company.kun.uz.service;
 import com.company.kun.uz.dto.article.ArticleDTO;
 import com.company.kun.uz.dto.article.ArticleFilterDto;
 import com.company.kun.uz.entity.ArticleEntity;
+import com.company.kun.uz.entity.CommentEntity;
 import com.company.kun.uz.entity.ProfileEntity;
 import com.company.kun.uz.entity.RegionEntity;
 import com.company.kun.uz.enums.ArticleStatus;
@@ -46,6 +47,7 @@ public class ArticleService {
         }
         Optional<RegionEntity> region = regionRepository.findById(dto.getRegionId());
         ArticleEntity articleEntity = new ArticleEntity();
+        CommentEntity comment = new CommentEntity();
         articleEntity.setContent(dto.getContent());
         articleEntity.setTitle(dto.getTitle());
         articleEntity.setCreatedDate(LocalDateTime.now());
