@@ -1,0 +1,23 @@
+9. Filter with specification
+    1. Article filter: articleId, profileId, status, createdDate (fromDate, toDate),
+            Pagination, orderByFiled [asc,desc]
+    2. Comment filter: commentId, profileId, articleId, createdDate (fromDate, toDate),
+            Pagination, orderByFiled [asc,desc]
+    3. Profile Filter: name,surname,email,role,status,profileId, CreatedDate(formDate, toDate)
+            Pagination, OrderByField [asc,desc]
+10. Validation using javax
+       ** Profile **
+           1. Registration with email verification
+           ** Profile **
+           1. Update Profile (name,surname,login, password)
+           ** ADMIN **
+           1. Create Profile
+           2. Update Profile
+       ** Article **
+           1. Create Article
+           2. Update Article
+       ** Like **
+            1. Create like/dislike
+       ** Comment **
+             1. Create
+             2. Update
