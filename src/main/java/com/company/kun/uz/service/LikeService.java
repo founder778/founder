@@ -1,16 +1,12 @@
 package com.company.kun.uz.service;
-
 import com.company.kun.uz.dto.LikeDto;
-import com.company.kun.uz.entity.CommentEntity;
 import com.company.kun.uz.entity.LikeEntity;
 import com.company.kun.uz.entity.ProfileEntity;
 import com.company.kun.uz.repository.LikeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
 import java.util.Optional;
-
 @Service
 public class LikeService {
     @Autowired
@@ -40,6 +36,10 @@ public class LikeService {
         likeRepository.save(likeEntity);
         dto.setId(likeEntity.getId());
         return dto;
+
+//        likeRepository.save(likeEntity);
+//        dto.setId(likeEntity.getId());
+//        return dto;
 
 
     }
