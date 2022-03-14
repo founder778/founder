@@ -20,7 +20,6 @@ public class LikeService {
 
     public LikeDto created(LikeDto dto,Integer userId){
         ProfileEntity profile = profileService.getByid(userId);
-        CommentEntity comment = new CommentEntity();
         LikeEntity likeEntity = new LikeEntity();
         likeEntity.setProfile(profile);
         likeEntity.setStatus(dto.getStatus());
