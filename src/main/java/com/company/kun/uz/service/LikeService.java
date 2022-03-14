@@ -1,6 +1,7 @@
 package com.company.kun.uz.service;
 
 import com.company.kun.uz.dto.LikeDto;
+import com.company.kun.uz.entity.CommentEntity;
 import com.company.kun.uz.entity.LikeEntity;
 import com.company.kun.uz.entity.ProfileEntity;
 import com.company.kun.uz.repository.LikeRepository;
@@ -19,6 +20,7 @@ public class LikeService {
 
     public LikeDto created(LikeDto dto,Integer userId){
         ProfileEntity profile = profileService.getByid(userId);
+        CommentEntity comment = new CommentEntity();
         LikeEntity likeEntity = new LikeEntity();
         likeEntity.setProfile(profile);
         likeEntity.setStatus(dto.getStatus());
